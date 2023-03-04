@@ -1,0 +1,169 @@
+body {
+    box-sizing: border-box;
+}
+
+.container  {
+    /* width: 100%; */
+    height: 89vh;
+    overflow: hidden;
+}
+
+.sideMenu {
+    width: 300px;
+    height: 100%;
+    background-color: #fcfcfc /*#64c676*/;
+    border-right: 3px solid #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    /* padding: 30px 0 0 0; */
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+.sideMenu label {
+    width: 20px;
+    height: 80px;
+    background-color: #64c676 /*#d1d1d1*/;
+    color: #ffff /*#686666*/;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 5px 0 5px rgba(23, 23, 54, 0.6);
+}
+#sideMenu-active:checked+.sideMenu {
+    transform: translateX(-12px);
+}
+#sideMenu-active:checked+.sideMenu label{
+    background-color: #d1d1d1;
+    transition: 0.5s;
+}
+#sideMenu-active:checked+.sideMenu label .fas {
+    transform: scaleX(-1);
+}
+
+#sideMenu-active {
+    display: none; /* 隱藏checkbox */
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: auto;
+}
+
+/* MarkerClusterGroup的css，要依照裡面來改 */
+.marker-cluster-small {
+    background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+    background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+    background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+    background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+    background-color: rgba(241, 128, 23, 0.6);
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+    line-height: 30px;
+}
+
+
+
+.clearfix {
+    clear: both;
+}
+
+.px-20{
+    padding: 0 20px;
+}
+.link-default{
+    text-decoration: none;
+}
+span {
+    float: right
+}
+.good-style{
+    background-color: #FFD84B;
+}
+.open-style{
+    background-color: #f28110;
+}
+.plastic-style{
+    background-color: #95c317;
+}
+.ucup-style{
+    background-color: #93e3fc;
+}
+.other-style{
+    background-color: #d12027;
+}
+
+/* 按鈕 */
+.zoomInBtn {
+    position: fixed;
+    top: 10px;
+    right: -45px;
+    z-index: 999;
+}
+.zoomInBtn:hover{
+    color: #64c676;
+}
+.zoomOutBtn {
+    position: fixed;
+    top: 40px;
+    right: -45px;
+    z-index: 999;
+}
+.zoomOutBtn:hover {
+    color: #64c676;
+}
+.getMyLocationBtn {
+    position: fixed;
+    top: 80px;
+    right: -45px;
+    z-index: 999;
+}
+.getMyLocationBtn:hover {
+    color: #64c676;
+}
